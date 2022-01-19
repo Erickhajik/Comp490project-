@@ -1,0 +1,120 @@
+[api-updater (non-obsolete-error-filter)] 10/26/2021 5:08:15 PM : Starting /Users/erickhajik/Downloads/2020.3.18f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 195.69ms
+moved types parse time: 78ms
+candidates parse time : 1ms
+C# parse time         : 303ms
+candidates check time : 41ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 10/26/2021 5:51:22 PM : Starting /Users/erickhajik/Downloads/2020.3.18f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 151.212ms
+moved types parse time: 59ms
+candidates parse time : 1ms
+C# parse time         : 323ms
+candidates check time : 31ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 10/26/2021 7:03:13 PM : Starting /Users/erickhajik/Downloads/2020.3.18f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 163.541ms
+moved types parse time: 66ms
+candidates parse time : 1ms
+C# parse time         : 291ms
+candidates check time : 30ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 10/26/2021 7:08:15 PM : Starting /Users/erickhajik/Downloads/2020.3.18f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 156.3ms
+moved types parse time: 61ms
+candidates parse time : 1ms
+C# parse time         : 308ms
+candidates check time : 40ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 10/27/2021 8:51:25 PM : Starting /Users/erickhajik/Downloads/2020.3.18f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 218.376ms
+moved types parse time: 62ms
+candidates parse time : 1ms
+C# parse time         : 279ms
+candidates check time : 31ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 10/28/2021 6:24:45 PM : Starting /Users/erickhajik/Downloads/2020.3.18f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 207.378ms
+moved types parse time: 62ms
+candidates parse time : 1ms
+C# parse time         : 312ms
+candidates check time : 38ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 10/29/2021 1:37:19 PM : Starting /Users/erickhajik/Downloads/2020.3.18f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 164.936ms
+moved types parse time: 75ms
+candidates parse time : 15ms
+C# parse time         : 428ms
+candidates check time : 47ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 10/29/2021 4:39:31 PM : Starting /Users/erickhajik/Downloads/2020.3.18f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 200.739ms
+moved types parse time: 66ms
+candidates parse time : 1ms
+C# parse time         : 294ms
+candidates check time : 43ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 10/29/2021 5:13:54 PM : Starting /Users/erickhajik/Downloads/2020.3.18f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 191.234ms
+moved types parse time: 63ms
+candidates parse time : 1ms
+C# parse time         : 305ms
+candidates check time : 36ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 10/29/2021 5:20:49 PM : Starting /Users/erickhajik/Downloads/2020.3.18f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 190.111ms
+moved types parse time: 67ms
+candidates parse time : 1ms
+C# parse time         : 353ms
+candidates check time : 46ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 10/29/2021 6:37:18 PM : Starting /Users/erickhajik/Downloads/2020.3.18f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 136.862ms
+moved types parse time: 56ms
+candidates parse time : 2ms
+C# parse time         : 248ms
+candidates check time : 35ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 11/15/2021 9:52:34 PM : Starting /Users/erickhajik/Downloads/2020.3.18f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 194.265ms
+moved types parse time: 69ms
+candidates parse time : 1ms
+C# parse time         : 339ms
+candidates check time : 48ms
+console write time    : 0ms
+
