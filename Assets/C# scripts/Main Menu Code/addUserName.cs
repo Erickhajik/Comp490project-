@@ -27,7 +27,7 @@ public class addUserName : MonoBehaviour
         userNameSave = (playerName.text).ToLower();
         WWWForm form = new WWWForm();
         form.AddField("userName", userNameSave);
-        WWW www = new WWW("http://3.14.146.44/AddUserName.php",form);
+        WWW www = new WWW("http://localhost/AddUserName.php",form);
         yield return www;
         Error = www.text;
         

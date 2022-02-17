@@ -19,7 +19,7 @@ public class InsertTimerIntoDB : MonoBehaviour
         form.AddField("puzzle3start", Puzzle3.Puzzle3Start);
         form.AddField("puzzle3end", Puzzle3.Puzzle3End);
         form.AddField("endtime", MainGameTimer.gameend);
-        WWW www = new WWW("http://3.14.146.44/AddTimers.php",form);
+        WWW www = new WWW("http://localhost/AddTimers.php",form);
         yield return www;
     }
 }

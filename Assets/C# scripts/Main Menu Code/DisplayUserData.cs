@@ -21,10 +21,10 @@ public class DisplayUserData : MonoBehaviour
     public string[] username;
        IEnumerator Start()
        {
-           WWW www = new WWW("http://3.14.146.44/Display.php");
+           WWW www = new WWW("http://localhost/Display.php");
            yield return www;
            string stringdata = www.text;
-           WWW www1 = new WWW("http://3.14.146.44/NumRow.php");
+           WWW www1 = new WWW("http://localhost/NumRow.php");
            yield return www1;
            int numberRow=int.Parse(www1.text);
            returnItem = stringdata.Split(';');
