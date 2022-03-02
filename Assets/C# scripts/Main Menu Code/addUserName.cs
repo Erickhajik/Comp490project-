@@ -7,11 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class addUserName : MonoBehaviour
 {
-    
-    
+    public GameObject mainMenu;
+    public GameObject credit;
+
     public InputField playerName;
     public Button submitName;
-  
+    
     public static string userNameSave;
    
     public static string Error;
@@ -35,10 +36,24 @@ public class addUserName : MonoBehaviour
         {
             DuplicateError.SetActive(true);
         }
-        else
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
+        // else
+        // {
+        //     SceneManager.LoadScene("MainMenu");
+        // }
+    }
+
+
+    public void enableMain()
+    {
+        mainMenu.SetActive(true);
+    }
+    public void enableCredit()
+    {
+        credit.SetActive(true);
+    }
+    public void disableMain()
+    {
+        mainMenu.SetActive(false);
     }
     
 }
