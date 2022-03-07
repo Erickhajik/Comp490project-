@@ -9,7 +9,11 @@ public class addUserName : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject credit;
-
+    public GameObject option;
+    public GameObject loadingtwo;
+    public GameObject loadingone;
+    public GameObject leaderboard;
+    public GameObject Login;
     public InputField playerName;
     public Button submitName;
     
@@ -55,5 +59,42 @@ public class addUserName : MonoBehaviour
     {
         mainMenu.SetActive(false);
     }
+     public void enableOption()
+     {
+         option.SetActive(true);
+     }
+     public void enableLeaderboard()
+     {
+         leaderboard.SetActive(true);
+     }
+     public void disableLeaderboard()
+     { 
+         leaderboard.SetActive(false);
+     }
+     public void disableOption()
+     { 
+         option.SetActive(false);
+     }
+     public void disableCredit()
+     { 
+         credit.SetActive(false);
+     }
+     public void disableLoadingtwo()
+     { 
+         loadingtwo.SetActive(false);
+     }
+     public void disableLoadingone()
+     { 
+         loadingone.SetActive(false);
+     }
+     public void enableLoadingone()
+     { 
+         loadingone.SetActive(true);
+     }
     
+     public void enableLogin()
+     { 
+         Login.SetActive(true);
+     }
+
 }
