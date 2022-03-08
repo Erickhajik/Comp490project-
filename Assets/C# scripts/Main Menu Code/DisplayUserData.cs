@@ -19,12 +19,16 @@ public class DisplayUserData : MonoBehaviour
     public Text Puzzle3End;
     public Text EndTime;
     public string[] username;
-       IEnumerator Start()
+    public void calllevel1Data()
+    {
+        StartCoroutine(userData());
+    }
+       IEnumerator userData()
        {
-           WWW www = new WWW("http://localhost/Display.php");
+           WWW www = new WWW("http://3.15.158.50/Display.php");
            yield return www;
            string stringdata = www.text;
-           WWW www1 = new WWW("http://localhost/NumRow.php");
+           WWW www1 = new WWW("http://3.15.158.50/NumRow.php");
            yield return www1;
            int numberRow=int.Parse(www1.text);
            returnItem = stringdata.Split(';');
