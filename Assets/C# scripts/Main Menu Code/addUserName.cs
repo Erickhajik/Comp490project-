@@ -15,8 +15,8 @@ public class addUserName : MonoBehaviour
     public GameObject leaderboard;
     public GameObject Login;
     public InputField playerName;
-    public Button submitName;
-    
+    // public Button submitName;
+    //
     public static string userNameSave;
    
     public static string Error;
@@ -28,18 +28,17 @@ public class addUserName : MonoBehaviour
     }
     IEnumerator addName()
     {
-   
         userNameSave = (playerName.text).ToLower();
         WWWForm form = new WWWForm();
         form.AddField("userName", userNameSave);
-        WWW www = new WWW("http://localhost/AddUserName.php",form);
+        WWW www = new WWW("http://3.15.158.50/AddUserName.php",form);
         yield return www;
         Error = www.text;
         
-        if (Error == "0")
-        {
-            DuplicateError.SetActive(true);
-        }
+        // if (Error == "0")
+        // {
+        //     DuplicateError.SetActive(true);
+        // }
         // else
         // {
         //     SceneManager.LoadScene("MainMenu");
@@ -96,5 +95,8 @@ public class addUserName : MonoBehaviour
      { 
          Login.SetActive(true);
      }
-
+     public void disableLogin()
+          { 
+              Login.SetActive(false);
+          }
 }
