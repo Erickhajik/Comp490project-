@@ -132,6 +132,13 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 1.6333333
+    functionName: calllevel1Data
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.65
     functionName: disableMain
     data: 
@@ -139,7 +146,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.8833333
+  - time: 1.95
     functionName: enableLeaderboard
     data: 
     objectReferenceParameter: {fileID: 0}
