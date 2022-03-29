@@ -78,6 +78,10 @@ public class addUserName : MonoBehaviour
      { 
          credit.SetActive(false);
      }
+     public void enbaleLoadingtwo()
+     { 
+         loadingtwo.SetActive(true);
+     }
      public void disableLoadingtwo()
      { 
          loadingtwo.SetActive(false);
