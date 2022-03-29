@@ -15,8 +15,7 @@ public class addUserName : MonoBehaviour
     public GameObject leaderboard;
     public GameObject Login;
     public InputField playerName;
-    // public Button submitName;
-    //
+
     public static string userNameSave;
    
     public static string Error;
