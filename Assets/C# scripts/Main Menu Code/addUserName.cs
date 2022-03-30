@@ -15,9 +15,9 @@ public class addUserName : MonoBehaviour
     public GameObject leaderboard;
     public GameObject Login;
     public InputField playerName;
-
+public InputField passwordeq;
     public static string userNameSave;
-   
+    private String frsd;
     public static string Error;
   
     public GameObject DuplicateError;
@@ -27,17 +27,23 @@ public class addUserName : MonoBehaviour
     }
     IEnumerator addName()
     {
-        userNameSave = (playerName.text).ToLower();
+        userNameSave = playerName.text;
+        frsd = passwordeq.text;
+      
         WWWForm form = new WWWForm();
-        form.AddField("userName", userNameSave);
-        WWW www = new WWW("http://3.15.158.50/AddUserName.php",form);
+        form.AddField("userName",userNameSave);
+        form.AddField("userName",frsd);
+      
+        WWW www = new WWW("http://18.117.242.65/login.php",form);
         yield return www;
         Error = www.text;
-        
-        // if (Error == "0")
-        // {
-        //     DuplicateError.SetActive(true);
-        // }
+       
+        if (Error == "0")
+        {
+            Debug.Log(Error);
+            Debug.Log("Error");
+            // DuplicateError.SetActive(true);
+        }
         // else
         // {
         //     SceneManager.LoadScene("MainMenu");
@@ -102,4 +108,26 @@ public class addUserName : MonoBehaviour
           { 
               Login.SetActive(false);
           }
+     // public void SignUpUser()
+     // {
+     //     StartCoroutine(SignUp());
+     // }
+     // IEnumerator SignUp()
+     // {
+     //     // userNameSave = (playerName.text).ToLower();
+     //     // // WWWForm form = new WWWForm();
+     //     // form.AddField("userName", userNameSave);
+     //     // WWW www = new WWW("http://52.15.87.87/Login",form);
+     //     // yield return www;
+     //     // Error = www.text;
+     //     //
+     //     // if (Error == "0")
+     //     // {
+     //     //     DuplicateError.SetActive(true);
+     //     // }
+     //     // else
+     //     // {
+     //     //     SceneManager.LoadScene("MainMenu");
+     //     // }
+     // }
 }
