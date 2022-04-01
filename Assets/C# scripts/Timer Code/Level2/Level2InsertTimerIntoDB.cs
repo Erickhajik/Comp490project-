@@ -10,7 +10,7 @@ public class Level2InsertTimerIntoDB : MonoBehaviour
     IEnumerator addTimer()
     {
         WWWForm form = new WWWForm();
-        form.AddField("userName", addUserName.userNameSave);
+        form.AddField("userName", MainMenuCode.userNameSave);
         form.AddField("gamestart", Level2MainTimer.Level2gamestart);
         form.AddField("puzzle1start", Level2Puzzle1.Level2puzzle1Start);
         form.AddField("puzzle1end", Level2Puzzle1.Level2puzzle1End);

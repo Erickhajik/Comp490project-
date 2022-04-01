@@ -9,6 +9,6 @@ public class WelcomeUser : MonoBehaviour
 
     private void Update()
     {
-        name.text= "Welocme "+addUserName.userNameSave;
+        name.text= "Welocme "+MainMenuCode.userNameSave;
     }
 }

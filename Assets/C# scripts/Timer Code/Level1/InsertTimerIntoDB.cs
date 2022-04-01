@@ -10,7 +10,7 @@ public class InsertTimerIntoDB : MonoBehaviour
     IEnumerator addTimer()
     {
         WWWForm form = new WWWForm();
-        form.AddField("userName", addUserName.userNameSave);
+        form.AddField("userName", MainMenuCode.userNameSave);
         form.AddField("gamestart", MainGameTimer.gamestart);
         form.AddField("puzzle1start", Puzzle1.puzzle1Start);
         form.AddField("puzzle1end", Puzzle1.puzzle1End);

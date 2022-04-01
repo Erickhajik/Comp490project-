@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GoToGameLobby
+  m_Name: LoginFromFirst
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -132,15 +132,15 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 1.6333333
-    functionName: disableMain
+  - time: 1.6166667
+    functionName: disableMainLoginSign
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.7
-    functionName: loadLobby
+  - time: 1.8833333
+    functionName: enableLoginPage
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

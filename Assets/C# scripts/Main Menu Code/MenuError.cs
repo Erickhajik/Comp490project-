@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SameNameError : MonoBehaviour
+public class MenuError : MonoBehaviour
 {
    public Transform box;
    public CanvasGroup background;

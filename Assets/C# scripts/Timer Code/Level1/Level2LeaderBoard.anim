@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GoToGameLobby
+  m_Name: Level2LeaderBoard
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -133,20 +133,20 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1.6333333
-    functionName: disableMain
+    functionName: disableLeaderl
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.7
-    functionName: loadLobby
+  - time: 1.8666667
+    functionName: enableLeader1
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3.0333333
+  - time: 3.0166667
     functionName: disableLoadingtwo
     data: 
     objectReferenceParameter: {fileID: 0}
