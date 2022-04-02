@@ -181,14 +181,13 @@ public class MainMenuCode : MonoBehaviour
      }
      IEnumerator signUp()
      {
-    
+         userNameSave = userNameSignUp.text;
          WWWForm form = new WWWForm();
-         form.AddField("userNameSignUp",userNameSignUp.text);
-         form.AddField("emailSignup", emailSignUp.text);
-         // form.AddField("conf", confPass.text);
-         form.AddField("passSignUp",passwordSignup.text);
+         form.AddField("userName",userNameSignUp.text);
+         form.AddField("email", emailSignUp.text);
+         form.AddField("pass",passwordSignup.text);
       
-         WWW www = new WWW("http://18.117.242.65/login.php",form);
+         WWW www = new WWW("http://18.117.242.65/SignUp.php",form);
          yield return www;
          Error = www.text;
          if (confPass.text == passwordSignup.text)
@@ -196,23 +195,32 @@ public class MainMenuCode : MonoBehaviour
              errorstuff.Play("Error");
              errorText.text = "Passwords don’t match";
          }
-         if (confPass.text == "" || passwordSignup.text== "" || userNameSignUp.text== "" || emailSignUp.text== "")
+         if (confPass.text == "" || passwordSignup.text == "" || userNameSignUp.text == "" ||
+                  emailSignUp.text == "")
          {
              errorstuff.Play("Error");
              errorText.text = "Please fill out all required fields";
          }
-         //Username Already Exist
-        // Email Already Exist
-         // if (Error == "0")
-         // {
-         //     loadingtwo.SetActive(true);
-         //     errorstuff.Play("LoginFromLogin");
-         // }
-         // else
-         // {
-         //     errorstuff.Play("Error");
-         //     errorText.text = "Invalid username or password";
-         // }
+         if (Error == "0")
+          {
+              errorstuff.Play("Error");
+              errorText.text = "Username Already Exist";
+          }
+          else if(Error=="1")
+          {
+              errorstuff.Play("Error");
+              errorText.text = "Email Already Exist";
+          }
+          else
+          {
+              
+              loadingtwo.SetActive(true);
+              errorstuff.Play("SignUpFromSignUp");
+              userNameSignUp.text = "";
+              emailSignUp.text = "";
+              passwordSignup.text = "";
+              confPass.text = "";
+          }
      }
 
 }
