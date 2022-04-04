@@ -19894,6 +19894,7 @@ GameObject:
   - component: {fileID: 1091965671}
   - component: {fileID: 1091965677}
   - component: {fileID: 1091965678}
+  - component: {fileID: 1091965679}
   m_Layer: 5
   m_Name: LastCode
   m_TagString: Untagged
@@ -20037,6 +20038,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bba0dadf972eb40b69ca4aae395ac988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1091965679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091965670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0911367a387df43188def9700de445ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1098129813
@@ -35525,9 +35538,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1091965678}
-        m_TargetAssemblyTypeName: menuFuncton, Assembly-CSharp
-        m_MethodName: GoMainMenu
+      - m_Target: {fileID: 1091965679}
+        m_TargetAssemblyTypeName: OpenMenu, Assembly-CSharp
+        m_MethodName: openMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
