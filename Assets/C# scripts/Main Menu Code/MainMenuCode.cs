@@ -49,20 +49,27 @@ public class MainMenuCode : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("userName",userNameSave);
         form.AddField("pse",frsd);
-      
-        WWW www = new WWW("http://18.117.242.65/login.php",form);
-        yield return www;
-        Error = www.text;
-       
-        if (Error == "0")
-        {
-            loadingtwo.SetActive(true);
-           errorstuff.Play("LoginFromLogin");
-        }
+      if(playerName.text.Length==0 || passwordeq.text.Length==0)
+      {
+          errorstuff.Play("Error");
+          errorText.text = "Please fill out all required fields";
+      }
         else
         {
-            errorstuff.Play("Error");
-            errorText.text = "Invalid username or password";
+            WWW www = new WWW("http://globaltroop.xyz/login.php", form);
+            yield return www;
+            Error = www.text;
+
+            if (Error == "0")
+            {
+                loadingtwo.SetActive(true);
+                errorstuff.Play("LoginFromLogin");
+            }
+            else
+            {
+                errorstuff.Play("Error");
+                errorText.text = "Invalid username or password";
+            }
         }
     }
 
@@ -186,41 +193,47 @@ public class MainMenuCode : MonoBehaviour
          form.AddField("userName",userNameSignUp.text);
          form.AddField("email", emailSignUp.text);
          form.AddField("pass",passwordSignup.text);
-      
-         WWW www = new WWW("http://18.117.242.65/SignUp.php",form);
-         yield return www;
-         Error = www.text;
-         if (confPass.text == passwordSignup.text)
+         if (confPass.text != passwordSignup.text)
          {
              errorstuff.Play("Error");
              errorText.text = "Passwords don’t match";
          }
-         if (confPass.text == "" || passwordSignup.text == "" || userNameSignUp.text == "" ||
-                  emailSignUp.text == "")
+         
+         else if (confPass.text.Length==0 || passwordSignup.text.Length==0|| userNameSignUp.text.Length==0 ||
+                  emailSignUp.text.Length==0)
          {
              errorstuff.Play("Error");
              errorText.text = "Please fill out all required fields";
          }
-         if (Error == "0")
-          {
-              errorstuff.Play("Error");
-              errorText.text = "Username Already Exist";
-          }
-          else if(Error=="1")
-          {
-              errorstuff.Play("Error");
-              errorText.text = "Email Already Exist";
-          }
-          else
-          {
-              
-              loadingtwo.SetActive(true);
-              errorstuff.Play("SignUpFromSignUp");
-              userNameSignUp.text = "";
-              emailSignUp.text = "";
-              passwordSignup.text = "";
-              confPass.text = "";
-          }
+         else
+         {
+
+
+
+             WWW www = new WWW("http://globaltroop.xyz/SignUp.php", form);
+             yield return www;
+             Error = www.text;
+             if (Error == "0")
+             {
+                 errorstuff.Play("Error");
+                 errorText.text = "Username Already Exist";
+             }
+             else if (Error == "1")
+             {
+                 errorstuff.Play("Error");
+                 errorText.text = "Email Already Exist";
+             }
+             else
+             {
+
+                 loadingtwo.SetActive(true);
+                 errorstuff.Play("SignUpFromSignUp");
+                 userNameSignUp.text = "";
+                 emailSignUp.text = "";
+                 passwordSignup.text = "";
+                 confPass.text = "";
+             }
+         }
      }
 
 }

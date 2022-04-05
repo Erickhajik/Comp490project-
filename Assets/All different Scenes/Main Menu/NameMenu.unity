@@ -1032,7 +1032,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: visit us at gloobaltroop.xyz
+  m_Text: visit us at globaltroop.xyz
 --- !u!222 &123891241
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2409,7 +2409,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Puzzle2 Start
+  m_Text: Maze Start
 --- !u!222 &348143596
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3531,7 +3531,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Puzzle3 Start
+  m_Text: Matching Start
 --- !u!222 &530005872
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9260,7 +9260,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Puzzle2 End
+  m_Text: Maze End
 --- !u!222 &1490938202
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12034,7 +12034,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Puzzle1 Start
+  m_Text: Cipher Start
 --- !u!222 &1971677334
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12113,7 +12113,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Puzzle3 End '
+  m_Text: 'Matching End '
 --- !u!222 &1985592138
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12392,7 +12392,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Puzzle1 End
+  m_Text: Cipher End
 --- !u!222 &2039782571
 CanvasRenderer:
   m_ObjectHideFlags: 0

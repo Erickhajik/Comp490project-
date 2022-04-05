@@ -25,10 +25,10 @@ public class Level2DisplayUserData : MonoBehaviour
     }
        IEnumerator userData()
        {
-           WWW www = new WWW("http://18.117.242.65/Level2LeaderBoard.php");
+           WWW www = new WWW("http://globaltroop.xyz/Level2LeaderBoard.php");
            yield return www;
            string stringdata = www.text;
-           WWW www1 = new WWW("http://18.117.242.65/NumRowLevel2.php");
+           WWW www1 = new WWW("http://globaltroop.xyz/NumRowLevel2.php");
            yield return www1;
            int numberRow=int.Parse(www1.text);
            returnItem = stringdata.Split(';');

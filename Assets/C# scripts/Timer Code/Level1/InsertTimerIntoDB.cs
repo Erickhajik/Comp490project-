@@ -20,7 +20,7 @@ public class InsertTimerIntoDB : MonoBehaviour
         form.AddField("puzzle3end", Puzzle3.Puzzle3End);
         form.AddField("endtime", MainGameTimer.gameend);
        
-        WWW www = new WWW("http://18.117.242.65/Level1Timer.php",form);
+        WWW www = new WWW("http://globaltroop.xyz/Level1Timer.php",form);
         yield return www;
     }
 }
