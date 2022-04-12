@@ -49,7 +49,10 @@ public class checkEach : MonoBehaviour
   void Start ()
   {
       k = gameObject.GetComponent<Animator>();
-      GameTime.StartTimer();
+      Cursor.visible = true;
+      Cursor.lockState = CursorLockMode.None;
+      
+      // GameTime.StartTimer();
       // CheckUsed.text = checkUsd.ToString();
   }
     void Update()
@@ -59,10 +62,13 @@ public class checkEach : MonoBehaviour
        
         if (checkA(A, Afill) && checkB(B, Bfill) && checkC(C, Cfill) &&
             checkD(D, Dfill) && checkE(E, Efill) && checkF(F, Ffill) &&
-            checkG(G, Gfill) && checkH(H, Hfill) && checkI(I, Ifill))
+            checkG(G, Gfill) && checkH(H, Hfill) && checkI(I, Ifill) && starting)
 
         {
-           
+            starting = false;
+            Level2Puzzle1.StopTimer();
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
        
         

@@ -1459,8 +1459,9 @@ GameObject:
   - component: {fileID: 42385045}
   - component: {fileID: 42385044}
   - component: {fileID: 42385043}
+  - component: {fileID: 42385052}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: Sudoku Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1487,7 +1488,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 61.23178
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1605,7 +1606,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42385042}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1ea63371aace4bd382aba4940aeae38, type: 3}
   m_Name: 
@@ -1787,6 +1788,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &42385052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42385042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ab7791622644aaeb8e271f4d5e3a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 1558090267}
 --- !u!1 &48910891
 GameObject:
   m_ObjectHideFlags: 0
@@ -3429,6 +3443,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118817347}
   m_CullTransparentMesh: 1
+--- !u!20 &122006446 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4459864851310106426, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 993663627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &143273845
 GameObject:
   m_ObjectHideFlags: 0
@@ -5059,7 +5078,7 @@ GameObject:
   - component: {fileID: 245769526}
   - component: {fileID: 245769527}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: Sudoku Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8118,7 +8137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8407701959147590811, guid: 5c3bf9e1c81c83d4c9d5219f330915ec, type: 3}
       propertyPath: m_Name
-      value: Redbox
+      value: Redbox(Sudoku)
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6480424098894279403, guid: 5c3bf9e1c81c83d4c9d5219f330915ec, type: 3}
@@ -19127,6 +19146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirstPersonController
       objectReference: {fileID: 0}
+    - target: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4459864851551516606, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_ReferenceResolution.x
       value: 1920
@@ -19635,6 +19658,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015231875}
   m_CullTransparentMesh: 1
+--- !u!1 &1019792195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1019792198}
+  - component: {fileID: 1019792197}
+  - component: {fileID: 1019792196}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1019792196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019792195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1019792197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019792195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1019792198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019792195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1023119763
 GameObject:
   m_ObjectHideFlags: 0
@@ -29242,6 +29331,7 @@ GameObject:
   - component: {fileID: 1611165390}
   - component: {fileID: 1611165389}
   - component: {fileID: 1611165388}
+  - component: {fileID: 1611165387}
   m_Layer: 0
   m_Name: MoveToPuzzle2
   m_TagString: Untagged
@@ -29263,6 +29353,22 @@ Transform:
   m_Father: {fileID: 1192095581}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1611165387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611165385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ae485fa36004b60a4f44c7a26f2d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SudokuCamera: {fileID: 245769526}
+  PlayerCamera: {fileID: 122006446}
+  Player: {fileID: 1771451169}
+  SudokuCanvas: {fileID: 42385042}
 --- !u!65 &1611165388
 BoxCollider:
   m_ObjectHideFlags: 0
