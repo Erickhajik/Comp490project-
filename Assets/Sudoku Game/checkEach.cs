@@ -9,7 +9,11 @@ using Random = UnityEngine.Random;
 
 public class checkEach : MonoBehaviour
 {
-  
+
+    public Camera sudokuCam;
+    public Canvas sudokustuff;
+    public Camera gameCam;
+    public GameObject gameCanvas;
     public Animator k;
     public Text timeAdd;
     public static string[] timesadd={"+10s","+20s","+30s"};
@@ -65,10 +69,12 @@ public class checkEach : MonoBehaviour
             checkG(G, Gfill) && checkH(H, Hfill) && checkI(I, Ifill) && starting)
 
         {
+           
             starting = false;
             Level2Puzzle1.StopTimer();
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            k.Play("SudokuFinal");
         }
        
         
@@ -76,7 +82,16 @@ public class checkEach : MonoBehaviour
 
         
     }
-    
+
+    public void gameEnd()
+    {
+        gameCam.gameObject.SetActive(true);
+        gameCanvas.SetActive(true);
+    sudokuCam.gameObject.SetActive(false);
+    sudokustuff.gameObject.SetActive(false);
+    Cursor.lockState = CursorLockMode.Locked;
+    Cursor.visible = false;
+    }
     //Hint Animation
 
     public void disable()
