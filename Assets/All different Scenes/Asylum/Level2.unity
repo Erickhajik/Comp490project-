@@ -1466,7 +1466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &42385043
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1624,6 +1624,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8537365865c4942ec90290c74f460de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sudokuCam: {fileID: 245769526}
+  sudokustuff: {fileID: 42385050}
+  gameCam: {fileID: 122006446}
+  gameCanvas: {fileID: 1771451169}
   k: {fileID: 42385045}
   timeAdd: {fileID: 1768555066}
   hintUsed:
@@ -12066,7 +12070,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 568087746}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 42385047}
+        m_TargetAssemblyTypeName: checkEach, Assembly-CSharp
+        m_MethodName: gameEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &568087746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21833,7 +21849,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56, y: -0}
+  m_AnchoredPosition: {x: 56, y: 0}
   m_SizeDelta: {x: 1662.06, y: 843.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1156870696
@@ -40384,7 +40400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00030518, y: -1668}
+  m_AnchoredPosition: {x: -0.00030518, y: -1791}
   m_SizeDelta: {x: 2560, y: 1600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2062191027
