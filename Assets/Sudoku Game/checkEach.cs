@@ -25,8 +25,7 @@ public class checkEach : MonoBehaviour
   public int[] Afill;
   public InputField[] B;
   public int[] Bfill;
-
-      public InputField[] C;
+  public InputField[] C;
       public int[] Cfill;
       public InputField[] D;
       public int[] Dfill;
@@ -40,17 +39,9 @@ public class checkEach : MonoBehaviour
       public int[] Hfill;
       public InputField[] I;
       public int[] Ifill;
-      // public int checkUsd=0;
       public Text HintShow;
-      // public Text CheckUsed;
-
-      // public GameObject disableFirst;
       public bool starting = true;
- 
- 
- 
- 
-  void Start ()
+      void Start ()
   {
       k = gameObject.GetComponent<Animator>();
       Cursor.visible = true;
@@ -63,26 +54,17 @@ public class checkEach : MonoBehaviour
     {
         checkWrong();
         HintShow.text = Hintnum.ToString();
-       
-        if (checkA(A, Afill) && checkB(B, Bfill) && checkC(C, Cfill) &&
-            checkD(D, Dfill) && checkE(E, Efill) && checkF(F, Ffill) &&
-            checkG(G, Gfill) && checkH(H, Hfill) && checkI(I, Ifill) && starting)
-
+        if (checkA(A, Afill) && checkA(B, Bfill) && checkA(C, Cfill) &&
+            checkA(D, Dfill) && checkA(E, Efill) && checkA(F, Ffill) &&
+            checkA(G, Gfill) && checkA(H, Hfill) && checkA(I, Ifill) && starting)
         {
-           
             starting = false;
-            Level2Puzzle1.StopTimer();
+            GameTime.StopTimer();
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             k.Play("SudokuFinal");
         }
-       
-        
-        
-
-        
     }
-
     public void gameEnd()
     {
         gameCam.gameObject.SetActive(true);
@@ -92,23 +74,18 @@ public class checkEach : MonoBehaviour
     Cursor.lockState = CursorLockMode.Locked;
     Cursor.visible = false;
     }
-    //Hint Animation
-
     public void disable()
     {
         ScaryAnim.SetActive(false);
-       
         // k.Play("New State 0");
     }
     public void PlaytheScary()
     {
-       
         int randomInt = Random.Range(0, 3);
         if (randomInt == 0)
         {
             timeAdd.text = timesadd[0];
             timeToAdd = 10;
-           
         }
         else if (randomInt == 1)
         {
@@ -122,14 +99,10 @@ public class checkEach : MonoBehaviour
         }
         ScaryAnim.SetActive(true);
         k.Play(hintUsed[0]);
-        
-       
     }
-    
     public void GetRandom()
    {
-      
-        int randomHint = 0;
+       int randomHint = 0;
         int randomInt = Random.Range(0, 9);
         Debug.Log(randomHint);
         if (randomInt == 0)
@@ -140,9 +113,6 @@ public class checkEach : MonoBehaviour
                 Hintnum++;
                 A[randomHint].text = Afill[randomHint].ToString();
                 A[randomHint].DeactivateInputField();
-               
-               
-                
             }
             else
             {
@@ -264,11 +234,7 @@ public class checkEach : MonoBehaviour
 
         PlaytheScary();
    }
-   
-
-
-
- bool checkA(InputField[] A,int[] Afill)
+    bool checkA(InputField[] A,int[] Afill)
     {
         int n = 0;
         for (int i = 0; i < A.Length; i++)
@@ -288,162 +254,20 @@ public class checkEach : MonoBehaviour
         }
             return false;
         }
-    bool checkB(InputField[] B,int[] Bfill)
-    {
-        int n = 0;
-        for (int i = 0; i < B.Length; i++)
-        {
-            if (B[i].text == Bfill[i].ToString())
-            {
-                n++;
-            }
-        }
-
-        if (n == B.Length)
-        {
-            return true;
-        }
-        return false;
-    }
-    bool checkC(InputField[] C,int[] Cfill)
-    {
-        int n = 0;
-        for (int i = 0; i < C.Length; i++)
-        {
-            if (C[i].text == Cfill[i].ToString())
-            {
-                n++;
-            }
-            
-        }
-
-        if (n == C.Length)
-        {
-            return true;
-        }
-        return false;
-    }
-    bool checkD(InputField[] D,int[] Dfill)
-    {
-        int n = 0;
-        for (int i = 0; i < D.Length; i++)
-        {
-            if (D[i].text == Dfill[i].ToString())
-            {
-                n++;
-            }
-           
-        }
-
-        if (n == D.Length)
-        {
-            return true;
-        }
-        return false;
-    }
-    bool checkE(InputField[] E,int[] Efill)
-    {
-        int n = 0;
-        for (int i = 0; i < E.Length; i++)
-        {
-            if (E[i].text == Efill[i].ToString())
-            {
-                n++;
-            }
-           
-        }
-
-        if (n == E.Length)
-        {
-            return true;
-        }
-        return false;
-    }
-    bool checkF(InputField[] F,int[] Ffill)
-    {
-        int n = 0;
-        for (int i = 0; i < F.Length; i++)
-        {
-            if (F[i].text == Ffill[i].ToString())
-            {
-                n++;
-            }
-            
-        }
-
-        if (n == F.Length)
-        {
-            return true;
-        }
-        return false;
-    }
-    bool checkG(InputField[] G,int[] Gfill)
-    {
-        int n = 0;
-        for (int i = 0; i < G.Length; i++)
-        {
-            if (G[i].text == Gfill[i].ToString())
-            {
-                n++;
-            }
-            
-        }
-        if (n == G.Length)
-        {
-            return true;
-        }
-        return false;
-    }
-    bool checkH(InputField[] H,int[] Hfill)
-    {
-        int n = 0;
-        for (int i = 0; i < H.Length; i++)
-        {
-            if (H[i].text == Hfill[i].ToString())
-            {
-                n++;
-            }
-            
-        }
-
-        if (n == H.Length)
-        {
-            return true;
-        }
-        return false;
-    }
-    bool checkI(InputField[] I,int[] Ifill)
-    {
-        int n = 0;
-        for (int i = 0; i < I.Length; i++)
-        {
-            if (I[i].text == Ifill[i].ToString())
-            {
-                n++;
-            }
-            
-            
-        }
-
-        if (n == I.Length)
-        {
-            return true;
-        }
-        return false;
-    }
+ 
 
     public void checkWrong()
     {
 
         checkAWrong(A,Afill);
-        checkBWrong(B,Bfill);
-        checkCWrong(C,Cfill);
-        checkDWrong(D,Dfill);
-        checkEWrong(E,Efill);
-        checkFWrong(F,Ffill);
-        checkGWrong(G,Gfill);
-        checkHWrong(H,Hfill);
-        checkIWrong(I,Ifill);
+        checkAWrong(B,Bfill);
+        checkAWrong(C,Cfill);
+        checkAWrong(D,Dfill);
+        checkAWrong(E,Efill);
+        checkAWrong(F,Ffill);
+        checkAWrong(G,Gfill);
+        checkAWrong(H,Hfill);
+        checkAWrong(I,Ifill);
     }
     
     void checkAWrong(InputField[] A,int[] Afill)
@@ -476,200 +300,7 @@ public class checkEach : MonoBehaviour
             
         }
     }
-    void checkBWrong(InputField[] B,int[] Bfill)
-    {
-        for (int i = 0; i < B.Length; i++)
-        {
-            if (B[i].text != "")
-            {
-                if (B[i].text != Bfill[i].ToString())
-                {
-                   
-
-                    B[i].image.color = Color.red;
-                }
-                else
-                {
-                    B[i].image.color = Color.white;
-
-                }
-            }
-            else if (B[i].text == "" && B[i].image.color == Color.red)
-            {
-                B[i].image.color = Color.white;
-            }
-        }
-    }
-    void checkCWrong(InputField[] C,int[] Cfill)
-    {
-        
-        for (int i = 0; i < C.Length; i++)
-        {
-            if (C[i].text != "")
-            {
-                if (C[i].text != Cfill[i].ToString())
-                {
-                    
-
-                    C[i].image.color = Color.red;
-                }
-                else
-                {
-                    C[i].image.color = Color.white;
-
-                }
-            }
-            else if (C[i].text == "" && C[i].image.color == Color.red)
-            {
-                C[i].image.color = Color.white;
-            }
-        }
-    }
-    void checkDWrong(InputField[] D,int[] Dfill)
-    {
-        for (int i = 0; i < D.Length; i++)
-        {
-            if (D[i].text != "")
-            {
-                if (D[i].text != Dfill[i].ToString())
-                {
-                   
-
-                    D[i].image.color = Color.red;
-                }
-                else
-                {
-                    D[i].image.color = Color.white;
-
-                }
-            }
-            else if (D[i].text == "" && D[i].image.color == Color.red)
-            {
-                D[i].image.color = Color.white;
-            }
-        }
-    }
-    void checkEWrong(InputField[] E,int[] Efill)
-    {
-        for (int i = 0; i < E.Length; i++)
-        {
-            if (E[i].text != "")
-            {
-                if (E[i].text != Efill[i].ToString())
-                {
-                   
-
-                    E[i].image.color = Color.red;
-                }
-                else
-                {
-                    E[i].image.color = Color.white;
-
-                }
-            }
-            else if (E[i].text == "" && E[i].image.color == Color.red)
-            {
-                E[i].image.color = Color.white;
-            }
-        }
-    }
-    void checkFWrong(InputField[] F,int[] Ffill)
-    {
-        for (int i = 0; i < F.Length; i++)
-        {
-            if (F[i].text != "")
-            {
-                if (F[i].text != Ffill[i].ToString())
-                {
-                   
-
-                    F[i].image.color = Color.red;
-                }
-                else
-                {
-                    F[i].image.color = Color.white;
-
-                }
-            }
-            else if (F[i].text == "" && F[i].image.color == Color.red)
-            {
-                F[i].image.color = Color.white;
-            }
-        }
-    }
-    void checkGWrong(InputField[] G,int[] Gfill)
-    {
-        for (int i = 0; i < G.Length; i++)
-        {
-            if (G[i].text != "")
-            {
-                if (G[i].text != Gfill[i].ToString())
-                {
-                   
-
-                    G[i].image.color = Color.red;
-                }
-                else
-                {
-                    G[i].image.color = Color.white;
-
-                }
-            }
-            else if (G[i].text == "" && G[i].image.color == Color.red)
-            {
-                G[i].image.color = Color.white;
-            }
-        }
-    }
-    void checkHWrong(InputField[] H,int[] Hfill)
-    {
-        for (int i = 0; i < H.Length; i++)
-        {
-            if (H[i].text != "")
-            {
-                if (H[i].text != Hfill[i].ToString())
-                {
-                   
-
-                    H[i].image.color = Color.red;
-                }
-                else
-                {
-                    H[i].image.color = Color.white;
-
-                }
-            }
-            else if (H[i].text == "" && H[i].image.color == Color.red)
-            {
-                H[i].image.color = Color.white;
-            }
-        }
-    }
-    void checkIWrong(InputField[] I,int[] Ifill)
-    {
-        for (int i = 0; i < I.Length; i++)
-        {
-            if (I[i].text != "")
-            {
-                if (I[i].text != Ifill[i].ToString())
-                {
-                  
-
-                    I[i].image.color = Color.red;
-                }
-                else
-                {
-                    I[i].image.color = Color.white;
-
-                }
-            }
-            else if (I[i].text == "" && I[i].image.color == Color.red)
-            {
-                I[i].image.color = Color.white;
-                
-            }
-        }
-    }
+    
     
 }
 

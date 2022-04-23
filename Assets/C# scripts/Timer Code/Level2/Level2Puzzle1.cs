@@ -15,7 +15,11 @@ public class Level2Puzzle1 : MonoBehaviour
     private bool stoptime;
     public static string Level2puzzle1Start="";
     public static string Level2puzzle1End="";
+    public static float time13;
     //Needs to be changed to whatever we press to start the game
+    
+    
+    
     void Start () {
         StartTimer();
     }
@@ -27,7 +31,12 @@ public class Level2Puzzle1 : MonoBehaviour
         }
         
     }
- 
+    public void addTime()
+    {
+        keepTiming = true;
+        time13=time13 + checkEach.timeToAdd;
+        startTime = Time.time-time13;
+    }
     void UpdateTime(){
         time = Time.time - startTime;
         timerText.text = TimeToString(time);
