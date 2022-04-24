@@ -11,8 +11,8 @@ public class GameTime : MonoBehaviour
     public static float startTime;
     public static bool keepTiming;
     public static float time;
-    public static string Level2puzzle1End="";
-    public static string Level2puzzle1Start="";
+    public static string gameend="";
+    public static string gamestart="";
     public static float time13;
     void Start () {
       
@@ -38,7 +38,7 @@ public class GameTime : MonoBehaviour
     }
     public static void StopTimer(){
         keepTiming = false;
-        Level2puzzle1End = TimeToString(time);
+        gameend = TimeToString(time);
         time = 0.0f;
 
     }
@@ -57,7 +57,7 @@ public class GameTime : MonoBehaviour
     public static void StartTimer(){
         keepTiming = true;
         startTime = Time.time;
-        Level2puzzle1Start = TimeToString(time);
+        gamestart = TimeToString(time);
     }
     public static string TimeToString(float t){
         string minutes = ((int) t / 60).ToString();

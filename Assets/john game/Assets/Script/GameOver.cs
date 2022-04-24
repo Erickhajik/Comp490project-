@@ -14,10 +14,12 @@ public class GameOver : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        // GetComponent<>()
+      
     }
     public void Setup(int score)
     {
+        Level2Puzzle2.StopTimer();
+        Debug.Log(Level2Puzzle2.Level2puzzle2End);
         gameObject.SetActive(true);
         final.SetActive(true);
         pointsText.text = "You got " + score.ToString() + " right";

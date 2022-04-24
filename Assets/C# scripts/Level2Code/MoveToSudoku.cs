@@ -16,6 +16,8 @@ public class MoveToSudoku : MonoBehaviour
 
     SudokuCamera.gameObject.SetActive(true);
     SudokuCanvas.SetActive(true);
-    GameTime.StartTimer();
+    Cursor.visible = true;
+    Cursor.lockState = CursorLockMode.None;
+    Level2Puzzle1.StartTimer();
     }
 }

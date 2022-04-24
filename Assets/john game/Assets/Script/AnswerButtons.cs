@@ -25,16 +25,13 @@ public class AnswerButtons : MonoBehaviour
     public GameObject answerB;
     public GameObject answerC;
     public GameObject answerD;
-    public static Animator anim;
+    
     int numCorrect = 0;
     int numQuestion = 0;
 
     public GameOver GameOverScene;
 
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-    }
+    
     public void AnswerA()
     {
         if(QuestionGenerate.actualAnswer == "A")
