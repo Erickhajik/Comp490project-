@@ -44,15 +44,39 @@ public class checkEach : MonoBehaviour
       public bool starting = true;
 
 
-
+      public GameObject playerCamra;
+      public GameObject gameCamra;
+      public GameObject playerCan;
+      public GameObject gameCan;
+      // Start is called before the first frame update
+      public void close()
+      {
+          playerCamra.SetActive(true);
+         
+          playerCan.SetActive(true);
+          gameCamra.SetActive(false);
+          gameCan.SetActive(false);
+          Cursor.lockState = CursorLockMode.Locked;
+          Cursor.visible = false;
+      }
 
       void Start()
       {
           k = gameObject.GetComponent<Animator>();
-          GameTime.StartTimer();
+       
           // Screen.SetResolution(2560,1600,true);
       }
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       void Update()
     {
         checkWrong();
@@ -63,7 +87,8 @@ public class checkEach : MonoBehaviour
             checkG(G, Gfill) && checkH(H, Hfill) && checkI(I, Ifill))
 
         {
-           
+           k.Play("final");
+           Level2Puzzle1.StopTimer();
         }
        
         

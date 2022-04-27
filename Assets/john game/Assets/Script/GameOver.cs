@@ -25,4 +25,5 @@ public class GameOver : MonoBehaviour
         pointsText.text = "You got " + score.ToString() + " right";
         anim.Play("finalpass");
     }
+    
 }
