@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class word : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Animator an;
    public InputField[] Firstword;
         public InputField[] Secondword;
          public InputField[] Thirdword;
@@ -18,13 +18,34 @@ public class word : MonoBehaviour
           public string[] FourW;
           public string[] FiveW;
           public bool finalCheck = true;
+          public Camera WordCamera;
+          public Camera PlayerCamera;
+          public GameObject Player;
+          public GameObject WordCanvas;
+          public void endGame()
+          {
+              PlayerCamera.gameObject.SetActive(true);
+              Player.SetActive(true);
 
+              WordCamera.gameObject.SetActive(false);
+              WordCanvas.SetActive(false);
+              Cursor.visible = false;
+              Cursor.lockState = CursorLockMode.Locked;
+             
+          }
+
+          void Start()
+          {
+              an = GetComponent<Animator>();
+          }
           void FixedUpdate()
           {
-              if (checkWord(Firstword, FirstW) && finalCheck && checkWord(Secondword, SecondW)&& checkWord(Thirdword, ThirdW)&& checkWord(Fourword, FourW)&& checkWord(Fiveword, FiveW))
+              
+          if (checkWord(Firstword, FirstW) && finalCheck && checkWord(Secondword, SecondW)&& checkWord(Thirdword, ThirdW)&& checkWord(Fourword, FourW)&& checkWord(Fiveword, FiveW))
               {
                   finalCheck = false;
-                  Debug.Log("Done");
+                  Level2Puzzle3.StopTimer();
+                 an.Play("end");
               }
           }
           bool checkWord(InputField[] word,string[] w) 
@@ -36,6 +57,7 @@ public class word : MonoBehaviour
                   if(word[i].text.Equals(w[i])) 
                   {
                       m++;
+                   
                   }
               }
               if(m==word.Length)
