@@ -13,6 +13,7 @@ public class MoveToSudoku : MonoBehaviour
         PlayerCamera.gameObject.SetActive(false);
         Player.SetActive(false);
         Screen.SetResolution(2560, 1600, true);
+        ZombieFollow.willfollow=false;
 
     SudokuCamera.gameObject.SetActive(true);
     SudokuCanvas.SetActive(true);

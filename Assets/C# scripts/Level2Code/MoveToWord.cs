@@ -13,6 +13,7 @@ public class MoveToWord : MonoBehaviour
         PlayerCamera.gameObject.SetActive(false);
         Player.SetActive(false);
         Screen.SetResolution(1920, 1080, true);
+        ZombieFollow.willfollow=false;
 
         WordCamera.gameObject.SetActive(true);
         WordCanvas.SetActive(true);

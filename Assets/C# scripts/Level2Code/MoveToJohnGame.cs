@@ -8,9 +8,11 @@ public class MoveToJohnGame : MonoBehaviour
     public GameObject gameCamra;
     public GameObject playerCan;
     public GameObject gameCan;
+    
     // Start is called before the first frame update
     public void OnMouseDown()
     {
+        ZombieFollow.willfollow=false;
    playerCamra.SetActive(false);
    gameCamra.SetActive(true);
    playerCan.SetActive(false);
