@@ -32922,11 +32922,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 0.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 2.5
+  m_AngularSpeed: 60
+  m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -32941,14 +32941,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949402788}
-  m_LocalRotation: {x: -0, y: 0.98750347, z: -0, w: 0.15759753}
-  m_LocalPosition: {x: -21.332779, y: -0.006185174, z: -12.74}
+  m_LocalRotation: {x: -0, y: 0.5820733, z: -0, w: 0.81313634}
+  m_LocalPosition: {x: -27.305315, y: -0.006185174, z: -30.093111}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 640035731}
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 161.865, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 71.193, z: 0}
 --- !u!1 &949623369
 GameObject:
   m_ObjectHideFlags: 0
@@ -33749,15 +33749,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.73
+      value: -21.9
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.74
+      value: -15.29
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalRotation.w
