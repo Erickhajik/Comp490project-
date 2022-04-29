@@ -17,10 +17,7 @@ public class FinalPassword : MonoBehaviour
         public GameObject congratulation;
         public Text timeTake;
         public static string enteredText;
-        public KeyCode exit;
-        public Camera MainCamera;
-        public Camera DoorPassCamera;
-        public Canvas DoorPassCanvas;
+       
         public void checkName()
         {
           
@@ -46,14 +43,7 @@ public class FinalPassword : MonoBehaviour
         }
         void Update()
         {
-            if (Input.GetKeyDown(exit))
-            {
-                Cursor.lockState = CursorLockMode.Locked; 
-                Cursor.visible = false; 
-                DoorPassCamera.gameObject.SetActive(false);
-                DoorPassCanvas.gameObject.SetActive(false);
-                MainCamera.gameObject.SetActive(true);
-            }
+            
         }
 
         public void ValueChangeCheck()
@@ -71,7 +61,7 @@ public class FinalPassword : MonoBehaviour
         }
         private void EndGame()
         {
-            MainGameTimer.StopTimer();
+            Level2MainTimer.StopTimer();
             congratulation.SetActive(true);
             timeTake.text = "You have Completed the Level 1 " + MainGameTimer.gameend;
         }
@@ -221,11 +211,7 @@ public class FinalPassword : MonoBehaviour
         }
         public void quitToGame()
         {
-            Cursor.lockState = CursorLockMode.Locked; 
-            Cursor.visible = false; 
-            DoorPassCamera.gameObject.SetActive(false);
-            DoorPassCanvas.gameObject.SetActive(false);
-            MainCamera.gameObject.SetActive(true);
+            SceneManager.LoadScene("NameMenu");
         }
 
 
