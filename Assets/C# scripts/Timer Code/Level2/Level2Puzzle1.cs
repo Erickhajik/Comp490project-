@@ -41,7 +41,12 @@ public class Level2Puzzle1 : MonoBehaviour
         time = Time.time - startTime;
         timerText.text = TimeToString(time);
     }
- 
+
+    public void stopT()
+    {
+        keepTiming = false;
+        time13 = time;
+    }
     public static void StopTimer(){
         keepTiming = false;
         Level2puzzle1End = TimeToString(time);
