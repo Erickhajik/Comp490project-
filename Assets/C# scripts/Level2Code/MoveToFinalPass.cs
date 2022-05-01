@@ -10,7 +10,8 @@ public class MoveToFinalPass : MonoBehaviour
     public GameObject computerCanvas;
     public void OnMouseDown()
     {
-    playerCamer.gameObject.SetActive(false);
+        Debug.Log(Level2Puzzle1.Level2puzzle1End);
+        playerCamer.gameObject.SetActive(false);
    computerCamer.gameObject.SetActive(true);
      playerCanvas.SetActive(false);
    computerCanvas.SetActive(true);

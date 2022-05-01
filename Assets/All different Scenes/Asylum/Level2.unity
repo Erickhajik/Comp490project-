@@ -54080,7 +54080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SudokuCamera: {fileID: 245769526}
   PlayerCamera: {fileID: 122006446}
-  Player: {fileID: 1771451169}
+  Player: {fileID: 661461055}
   SudokuCanvas: {fileID: 42385042}
 --- !u!65 &1611165388
 BoxCollider:

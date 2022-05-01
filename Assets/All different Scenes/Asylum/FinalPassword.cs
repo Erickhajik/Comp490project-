@@ -23,7 +23,7 @@ public class FinalPassword : MonoBehaviour
           
             enteredText = textinput.text;
             
-            if (enteredText == "pumpkin")
+            if (enteredText == "GameOver")
             {
                 EndGame();
               
@@ -35,7 +35,7 @@ public class FinalPassword : MonoBehaviour
         }
         private void Start()
         {
-            actions.Add("pumkin", EndGame);
+            actions.Add("pumpkin", EndGame);
 
             keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
             keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
@@ -62,8 +62,10 @@ public class FinalPassword : MonoBehaviour
         private void EndGame()
         {
             Level2MainTimer.StopTimer();
+            Debug.Log(Level2Puzzle1.Level2puzzle1End);
             congratulation.SetActive(true);
-            timeTake.text = "You have Completed the Level 1 " + MainGameTimer.gameend;
+            timeTake.text = "You have Completed the Level 1 " + Level2MainTimer.Level2gameend;
+            
         }
 
         public void addQ()

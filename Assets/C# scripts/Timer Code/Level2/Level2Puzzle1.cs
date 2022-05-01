@@ -45,7 +45,8 @@ public class Level2Puzzle1 : MonoBehaviour
     public static void StopTimer(){
         keepTiming = false;
         Level2puzzle1End = TimeToString(time);
-       time = 0.0f;
+        // Debug.Log(Level2puzzle1End);
+      
     }
  
     void ResumeTimer(){

@@ -87,8 +87,11 @@ public class checkEach : MonoBehaviour
             checkG(G, Gfill) && checkH(H, Hfill) && checkI(I, Ifill))
 
         {
-           k.Play("final");
-           Level2Puzzle1.StopTimer();
+          
+            Level2Puzzle1.StopTimer();
+            Debug.Log(Level2Puzzle1.Level2puzzle1End);
+            k.Play("final");
+          
         }
        
         
