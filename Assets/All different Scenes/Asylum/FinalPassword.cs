@@ -62,7 +62,7 @@ public class FinalPassword : MonoBehaviour
         private void EndGame()
         {
             Level2MainTimer.StopTimer();
-            Debug.Log(Level2Puzzle1.Level2puzzle1End);
+           
             congratulation.SetActive(true);
             timeTake.text = "You have Completed the Level 2 " + Level2MainTimer.Level2gameend;
             

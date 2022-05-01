@@ -13,7 +13,6 @@ public class Level2InsertTimerIntoDB : MonoBehaviour
         form.AddField("userName", MainMenuCode.userNameSave);
         form.AddField("gamestart", Level2MainTimer.Level2gamestart);
         form.AddField("puzzle1start", Level2Puzzle1.Level2puzzle1Start);
-        Debug.Log(Level2Puzzle1.Level2puzzle1End);
         form.AddField("puzzle1end", Level2Puzzle1.Level2puzzle1End);
         form.AddField("puzzle2start", Level2Puzzle2.Level2puzzle2Start);
         form.AddField("puzzle2end", Level2Puzzle2.Level2puzzle2End);

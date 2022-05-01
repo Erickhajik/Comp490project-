@@ -31,8 +31,7 @@ public class Level2MainTimer : MonoBehaviour
     public static void StopTimer(){
         keepTiming = false;
         Level2gameend = TimeToString(time);
-        time = 0.0f;
-
+       Debug.Log(Level2gameend);
     }
     public void ResumeTimer(){
         keepTiming = true;
@@ -42,6 +41,7 @@ public class Level2MainTimer : MonoBehaviour
         keepTiming = true;
         startTime = Time.time;
         Level2gamestart = TimeToString(time);
+        
     }
     public static string TimeToString(float t){
         string minutes = ((int) t / 60).ToString();
