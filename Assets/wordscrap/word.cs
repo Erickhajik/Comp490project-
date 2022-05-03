@@ -31,6 +31,8 @@ public class word : MonoBehaviour
               WordCanvas.SetActive(false);
               Cursor.visible = false;
               Cursor.lockState = CursorLockMode.Locked;
+              ZombieFollow.willfollow=true;
+
              
           }
 

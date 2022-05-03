@@ -58,6 +58,7 @@ public class checkEach : MonoBehaviour
           gameCan.SetActive(false);
           Cursor.lockState = CursorLockMode.Locked;
           Cursor.visible = false;
+         ZombieFollow.willfollow=true;
       }
 
       void Start()

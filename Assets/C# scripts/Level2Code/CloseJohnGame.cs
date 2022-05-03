@@ -17,5 +17,7 @@ public class CloseJohnGame : MonoBehaviour
         gameCan.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        ZombieFollow.willfollow=true;
+
     }
 }
