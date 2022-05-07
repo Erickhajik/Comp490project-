@@ -7,8 +7,9 @@ public class ZombieFollow : MonoBehaviour
   public NavMeshAgent enemy;
   public Transform Player;
 
-  public static bool willfollow=true;
+  public static bool willfollow=false;
   Vector3 home = new Vector3(-27.30532f,-0.006185174f,-30.09311f);
+  
 
   void Start() {
   }

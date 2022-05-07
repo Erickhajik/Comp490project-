@@ -40,6 +40,8 @@ public class LockControl : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + 0.3f, transform.position.z);
             isOpened = true;
+            ZombieFollow.willfollow=true;
+            Doorlock.doorlock=true;
         }
     }
 
