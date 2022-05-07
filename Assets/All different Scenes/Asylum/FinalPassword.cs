@@ -23,7 +23,7 @@ public class FinalPassword : MonoBehaviour
           
             enteredText = textinput.text;
             
-            if (enteredText == "GameOver")
+            if (enteredText.ToLower() == "gameover")
             {
                 EndGame();
               
