@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Doorlock : MonoBehaviour
 {
 
-    public Animator anim;
+    public Animator anime;
     public static bool doorlock=false;
 
     private void OnMouseDown()
@@ -14,7 +14,7 @@ public class Doorlock : MonoBehaviour
         if (doorlock)
         {
             
-            anim.SetTrigger("Click");
+            anime.SetTrigger("Click");
             Debug.Log("clicked on door");
         }
         
