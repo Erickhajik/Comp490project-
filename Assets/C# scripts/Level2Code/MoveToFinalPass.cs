@@ -15,5 +15,6 @@ public class MoveToFinalPass : MonoBehaviour
    computerCamer.gameObject.SetActive(true);
      playerCanvas.SetActive(false);
    computerCanvas.SetActive(true);
+   ZombieFollow.willfollow=false;
     }
 }
