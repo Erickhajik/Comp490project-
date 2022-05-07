@@ -35,7 +35,7 @@ public class FinalPassword : MonoBehaviour
         }
         private void Start()
         {
-            actions.Add("pumpkin", EndGame);
+            actions.Add("GameOver", EndGame);
 
             keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
             keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
