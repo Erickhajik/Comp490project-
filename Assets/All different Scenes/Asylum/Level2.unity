@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8950,11 +8950,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291298017}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4345942, y: 0.40692118, z: 1.7943751}
-  m_Center: {x: -0.00000026190295, y: 0.028300408, z: 0.8503246}
+  m_Size: {x: 0.92183715, y: 0.91362214, z: 1.7943751}
+  m_Center: {x: -0.02609467, y: 0.01970224, z: 0.8503246}
 --- !u!82 &291298021
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8975,7 +8975,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.5079741
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -23966,6 +23966,26 @@ PrefabInstance:
     - target: {fileID: 1155825635249726181, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.066111535
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216688472153998210, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0.0054781437
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216688472153998210, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.03336966
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216688472153998210, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0.055095404
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216688472153998210, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.43139344
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216688472153998210, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.46064147
       objectReference: {fileID: 0}
     - target: {fileID: 1228465616358054297, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_LocalPosition.x
