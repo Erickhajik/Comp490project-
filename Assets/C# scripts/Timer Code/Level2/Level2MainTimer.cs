@@ -13,16 +13,28 @@ public class Level2MainTimer : MonoBehaviour
     public static float time;
     public static string Level2gameend="";
     public static string Level2gamestart="";
-    
+    private static int[] times = {5, 10, 15, 20,25,30,35,40};
+    public static float time1;
     void Start () {
       
     }
-    void Update () {
-       
+    void Update ()
+    {
+        time1 = Time.time;
         if(keepTiming){
             UpdateTime();
         }
         
+    }
+
+    public static void addTime()
+    {
+        keepTiming = false;
+        time1 = time;
+        int a = Random.Range(0, 7);
+        time1 = time1 + times[a];
+        startTime = Time.time -time1;
+        keepTiming = true;
     }
     public void UpdateTime(){
         time = Time.time - startTime;

@@ -552,6 +552,8 @@ public class FirstPersonController : MonoBehaviour
         if (other.gameObject.name.Equals("Zombie1"))
         {
             Debug.Log("touched");
+            Level2MainTimer.addTime();
+           
         }
     }
 }
