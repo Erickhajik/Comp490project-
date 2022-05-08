@@ -545,7 +545,11 @@ public class FirstPersonController : MonoBehaviour
             Debug.Log(NumberCoin);
             Destroy(other.gameObject);
         }
-        if (other.gameObject.tag.Equals("Zombie"))
+        
+    }
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.name.Equals("Zombie1"))
         {
             Debug.Log("touched");
         }
