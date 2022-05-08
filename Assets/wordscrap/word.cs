@@ -47,6 +47,7 @@ public class word : MonoBehaviour
               {
                   finalCheck = false;
                   Level2Puzzle3.StopTimer();
+                  Debug.Log(Level2Puzzle3.Level2Puzzle3End);
                  an.Play("end");
               }
           }
