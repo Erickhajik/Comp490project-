@@ -43,6 +43,7 @@ public class Level2MainTimer : MonoBehaviour
     public static void StopTimer(){
         keepTiming = false;
         Level2gameend = TimeToString(time);
+        Level2gamestart = "0:0";
        Debug.Log(Level2gameend);
     }
     public void ResumeTimer(){
