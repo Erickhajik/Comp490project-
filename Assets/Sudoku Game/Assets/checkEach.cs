@@ -42,6 +42,7 @@ public class checkEach : MonoBehaviour
       public GameObject gameCan;
       public void close()
       {
+          Screen.SetResolution(1920, 1080, true);
           playerCamra.SetActive(true);
           playerCan.SetActive(true);
           gameCamra.SetActive(false);

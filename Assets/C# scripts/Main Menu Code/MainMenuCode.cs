@@ -102,6 +102,10 @@ public class MainMenuCode : MonoBehaviour
         errorText.text = "Email Already Exist";
     }
 
+    public void changeResoultion()
+    {
+        Screen.SetResolution(1920, 1080, true);
+    }
     public void passwordNoMatch()
     {
         errorText.text = "Passwords don’t match";
