@@ -19,6 +19,7 @@ public class Quiz : MonoBehaviour
 
     void Update()
     {
+        
         if (pleaseUpdate == false)
         {
             pleaseUpdate = true; ;

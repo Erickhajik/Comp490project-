@@ -12,6 +12,7 @@ public class QuestionGenerate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (displayingQuestion == false)
         {
             displayingQuestion = true;

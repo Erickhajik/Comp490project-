@@ -42,7 +42,13 @@ public class word : MonoBehaviour
           }
           void FixedUpdate()
           {
-              
+              if (Input.GetKeyDown(KeyCode.I))
+              {
+                  finalCheck = false;
+                  Level2Puzzle3.StopTimer();
+                  Debug.Log(Level2Puzzle3.Level2Puzzle3End);
+                  an.Play("end");
+              }
           if (checkWord(Firstword, FirstW) && finalCheck && checkWord(Secondword, SecondW)&& checkWord(Thirdword, ThirdW)&& checkWord(Fourword, FourW)&& checkWord(Fiveword, FiveW))
               {
                   finalCheck = false;
