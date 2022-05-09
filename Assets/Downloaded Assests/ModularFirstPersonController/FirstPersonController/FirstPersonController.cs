@@ -18,6 +18,7 @@ public class FirstPersonController : MonoBehaviour
 {
     private Rigidbody rb;
     public int NumberCoin = 0;
+    public AudioSource d;
 
     #region Camera Movement Variables
 
@@ -132,10 +133,12 @@ public class FirstPersonController : MonoBehaviour
 
     #endregion
 
+
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-
+        d=GetComponent<AudioSource>();
         crosshairObject = GetComponentInChildren<Image>();
 
         // Set internal variables
@@ -152,6 +155,7 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
+       
         if(lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -553,7 +557,7 @@ public class FirstPersonController : MonoBehaviour
         {
             Debug.Log("touched");
             Level2MainTimer.addTime();
-           
+           MusicOne.zombieSound.Play();
         }
     }
 }
