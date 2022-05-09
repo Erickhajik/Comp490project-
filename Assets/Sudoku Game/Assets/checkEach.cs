@@ -57,6 +57,12 @@ public class checkEach : MonoBehaviour
       void Update()
     {
         checkWrong();
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            Level2Puzzle1.StopTimer();
+            Debug.Log(Level2Puzzle1.Level2puzzle1End);
+            k.Play("final");
+        }
         HintShow.text = Hintnum.ToString();
         if (check(A, Afill) && check(B, Bfill) && check(C, Cfill) &&
             check(D, Dfill) && check(E, Efill) && check(F, Ffill) &&

@@ -16,6 +16,14 @@ public class GameOver : MonoBehaviour
         anim = GetComponent<Animator>();
       
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            
+        }
+    }
     public void Setup(int score)
     {
         Level2Puzzle2.StopTimer();
